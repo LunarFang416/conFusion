@@ -28,3 +28,4 @@ jobs:
       - name: Run linters
         working-directory: ./src
         run: npm run style:lint
+
