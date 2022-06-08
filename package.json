@@ -10,7 +10,7 @@
     "style:lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "style:formatter": "prettier --check '**/*.{js,jsx,ts,tsx}'",
     "style:all": "npm run style:lint && npm run style:formatter"
-  },
+  }, 
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.3.0",
