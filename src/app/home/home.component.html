@@ -1,0 +1,50 @@
+<div class="container"
+    fxLayout="row"
+    fxLayout.sm="column"
+    fxLayout.xs="column"
+    fxLayoutAlign.gt-md="space-around center"
+    fxLayoutGap="10px">
+
+    <mat-card *ngIf="dish" fxFlex>
+        <mat-card-header>
+            <div mat-card-avatar></div>
+            <mat-card-title>
+            <h3>{{dish.name | uppercase}}</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{dish.image}} alt={{dish.name}}>
+        <mat-card-content>
+            <p>{{dish.description}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card *ngIf="promo" fxFlex>
+        <mat-card-header>
+            <div mat-card-avatar></div>
+            <mat-card-title>
+            <h3>{{promo.name | uppercase}}</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{promo.image}} alt={{promo.name}}>
+        <mat-card-content>
+            <p>{{promo.description}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card *ngIf="featuredEmployee" fxFlex>
+        <mat-card-header>
+            <div mat-card-avatar></div>
+            <mat-card-title>
+            <h3>{{featuredEmployee.name | uppercase}}</h3>
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{featuredEmployee.image}} alt={{featuredEmployee.name}}>
+        <mat-card-content>
+            <p>{{featuredEmployee.description}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+
+</div>

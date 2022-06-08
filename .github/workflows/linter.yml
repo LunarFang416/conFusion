@@ -1,0 +1,25 @@
+name: linter-action
+on: [pull_request]
+jobs: 
+  linter: 
+    run-ons: ubuntu-latest
+      steps: 
+        - name: Checkout
+          uses: actions/checkout@v3
+        
+        - uses: actions/setup-node@v3
+          with:
+            node-version: '14'
+
+        - name: Install dependencies
+          run: npm install
+
+        - name: Install Angular CLI
+          run: npm install -g @angular/cli > /dev/null 
+
+        - name: Run linters
+          uses: wearerequired/lint-action@v1
+          with: 
+            github_token: ${{ secrets.github_token }}
+            # Enable linters
+              eslint: true
