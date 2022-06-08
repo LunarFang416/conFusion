@@ -24,8 +24,11 @@ jobs:
       - name: Run Formatter
         working-directory: ./src
         run: npm run style:formatter
+        env:
+          CI: false
 
       - name: Run linters
         working-directory: ./src
         run: npm run style:lint
-
+        env:
+          CI: false
