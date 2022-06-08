@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { Injectable } from '@angular/core';
 import { LEADERS } from '../shared/leaders';
 import { Leader } from '../shared/leader';
