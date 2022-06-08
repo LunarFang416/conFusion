@@ -7,9 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "style": "prettier --check '**/*.{js,jsx,ts,tsx}'",
-    "format": "npm run lint && npm run style"
+    "style:lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "style:formatter": "prettier --check '**/*.{js,jsx,ts,tsx}'"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +23,8 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "prettier": "^2.6.2",
@@ -42,8 +43,8 @@
     "@angular/compiler-cli": "~13.3.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
-    "@typescript-eslint/eslint-plugin": "5.17.0",
-    "@typescript-eslint/parser": "5.17.0",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
     "eslint": "^8.17.0",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",

@@ -21,6 +21,10 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli > /dev/null 
 
+      - name: Run Formatter
+        working-directory: ./src
+        run: npm eun style:formatter
+
       - name: Run linters
         working-directory: ./src
-        run: npm run lintall
+        run: npm run style:lint
