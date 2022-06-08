@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Formatter
         working-directory: ./src
-        run: npm eun style:formatter
+        run: npm run style:formatter
 
       - name: Run linters
         working-directory: ./src
