@@ -1,5 +1,5 @@
 name: linter-action
-on: [push, pull_request]
+on: [pull_request]
 jobs: 
   linter:
     name: Run Linters
@@ -22,7 +22,4 @@ jobs:
         run: npm install -g @angular/cli > /dev/null 
 
       - name: Run linters
-        uses: wearerequired/lint-action@v2
-        with: 
-          eslint: true
-          github_token: ${{ secrets.github_token }}
+        run: eslint . --ext .js,.jsx,.ts,.tsx
