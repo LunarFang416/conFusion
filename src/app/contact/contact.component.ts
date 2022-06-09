@@ -7,20 +7,17 @@ import { Feedback, ContactType } from '../shared/feedback';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-
   feedbackForm: FormGroup;
   feedback: Feedback;
   contactType = ContactType;
   constructor(private fb: FormBuilder) {
-    this.createForm()
+    this.createForm();
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   createForm(): void {
     this.feedbackForm = this.fb.group({
@@ -29,8 +26,7 @@ export class ContactComponent implements OnInit {
       telnum: 0,
       agree: false,
       contacttype: 'None',
-      message: ''
-    })
+      message: '',
+    });
   }
-
 }

@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "style:lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "style:formatter": "prettier --check '**/*.{js,jsx,ts,tsx}'"
+    "style:formatter": "prettier --check '**/*.{js,jsx,ts,tsx}'",
+    "style": "prettier --write '**/*.{js,jsx,ts,tsx}'"
   },
   "private": true,
   "dependencies": {

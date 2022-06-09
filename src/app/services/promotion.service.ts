@@ -4,22 +4,20 @@ import { Promotion } from '../shared/promotion';
 import { PROMOTIONS } from '../shared/promotions';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PromotionService {
-
-  constructor() { }
+  constructor() {}
 
   getPromotions(): Promotion[] {
     return PROMOTIONS;
   }
 
   getPromotion(id: string): Promotion {
-    return PROMOTIONS.filter(promotion => promotion.id === id)[0];
+    return PROMOTIONS.filter((promotion) => promotion.id === id)[0];
   }
 
-  getFeaturedPromotions(): Promotion{
+  getFeaturedPromotions(): Promotion {
     return PROMOTIONS.filter((promotion) => promotion.featured)[0];
   }
-
 }

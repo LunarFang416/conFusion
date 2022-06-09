@@ -7,16 +7,14 @@ import { LoginComponent } from '../login/login.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  constructor(private dialog: MatDialog) {}
 
-  constructor(private dialog: MatDialog) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  openLoginForm(): void{
-    this.dialog.open(LoginComponent, {width: '500px', height: '450px'});
+  openLoginForm(): void {
+    this.dialog.open(LoginComponent, { width: '500px', height: '450px' });
   }
 }
